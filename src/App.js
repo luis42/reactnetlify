@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,6 +16,18 @@ function App() {
       setCount(hours);
     }, 1000);
   }, []);
+
+  useLayoutEffect(() => {
+    const date = new Date();
+    const hours =
+      date.getHours().toString().padStart(2, '0') +
+      ':' +
+      date.getMinutes().toString().padStart(2, '0') +
+      ':' +
+      date.getSeconds().toString().padStart(2, '0');
+    setCount(hours);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
