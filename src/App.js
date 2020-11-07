@@ -7,7 +7,12 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       const date = new Date();
-      const hours = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+      const hours =
+        date.getHours().toString().padStart(2, '0') +
+        ':' +
+        date.getMinutes().toString().padStart(2, '0') +
+        ':' +
+        date.getSeconds().toString().padStart(2, '0');
       setCount(hours);
     }, 1000);
   }, []);
