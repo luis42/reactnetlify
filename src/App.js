@@ -29,6 +29,10 @@ function App() {
         <h1>Hola Sandy próximamente tendré una página web </h1>
         <h3>{`La hora es ${count ?? 'Esperando'}`}</h3>
       </header>
+      <div className="input-direction back-fond">
+        <input className="input-property" placeholder="Ingresa tu tarea" />
+        <button onClick={() => alert('Agregar')}> Agregar</button>
+      </div>
     </div>
   );
 }
