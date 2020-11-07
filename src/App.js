@@ -1,7 +1,16 @@
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [count, setCount] = useState();
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      const hours = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+      setCount(hours);
+    }, 1000);
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -13,6 +22,7 @@ function App() {
           Learn React
         </a>
         <h1>Hola Sandy próximamente tendré una página web </h1>
+        <h3>{`La hora es ${count ?? 'Esperando'}`}</h3>
       </header>
     </div>
   );
