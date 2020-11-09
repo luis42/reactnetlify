@@ -45,6 +45,7 @@ function App() {
         <input className="input-property" placeholder="Ingresa tu tarea" />
         <button onClick={() => alert('Agregar')}> Agregar</button>
       </div>
+      <h1>Proximamente</h1>
     </div>
   );
 }
