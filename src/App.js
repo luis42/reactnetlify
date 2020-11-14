@@ -1,13 +1,13 @@
-import { useEffect, useState, useLayoutEffect } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 // Styles
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
-  const { register, handleSubmit, watch, errors } = useForm();
-  const [count, setCount] = useState();
+  const { register, handleSubmit, errors } = useForm();
+  // const [count, setCount] = useState();
   const [homeWork, setHomeWork] = useState([]);
   // useEffect(() => {
   //   setInterval(() => {
@@ -22,16 +22,16 @@ function App() {
   //   }, 1000);
   // }, []);
 
-  useLayoutEffect(() => {
-    const date = new Date();
-    const hours =
-      date.getHours().toString().padStart(2, '0') +
-      ':' +
-      date.getMinutes().toString().padStart(2, '0') +
-      ':' +
-      date.getSeconds().toString().padStart(2, '0');
-    setCount(hours);
-  }, []);
+  // useLayoutEffect(() => {
+  //   const date = new Date();
+  //   const hours =
+  //     date.getHours().toString().padStart(2, '0') +
+  //     ':' +
+  //     date.getMinutes().toString().padStart(2, '0') +
+  //     ':' +
+  //     date.getSeconds().toString().padStart(2, '0');
+  //   setCount(hours);
+  // }, []);
 
   const onSubmit = data =>
     setHomeWork(v => {
@@ -42,7 +42,6 @@ function App() {
 
   return (
     <>
-      {console.log(errors)}
       <div className="container-fluid">
         <div className="card m-4">
           <div className="d-flex flex-column bd-highlight m-3 ">
