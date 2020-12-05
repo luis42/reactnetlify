@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks", "plugin:jest/all", "prettier/react", "plugin:prettier/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "prettier", "jest"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-nested-ternary": "off",
+    "jsx-a11y/label-has-associated-control": ["error", { "assert": "htmlFor" }],
+    "camelcase": ["error", { "ignoreDestructuring": true }],
+    "no-cond-assign": ["error", "except-parens"],
+    "react/jsx-props-no-spreading": ["error", { "exceptions": ["WrappedComponent"] }],
+    "import/no-cycle": ["warn", { "maxDepth": 1 }]
+  }
+}

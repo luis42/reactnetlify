@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/react-in-jsx-scope */
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 // import logo from './logo.svg';
 import './App.css';
 // Styles
 import 'bootstrap/dist/css/bootstrap.css';
+import { Button, ButtonGroup, Card } from 'react-bootstrap';
 
 function App() {
   const { register, handleSubmit, errors } = useForm();
@@ -59,10 +62,10 @@ function App() {
                   {errors['add-home-work'] && <span className="text-danger m-2">{errors['add-home-work'].message}</span>}
                 </div>
                 <div className="form-group col-12 col-md-2">
-                  <label className="pb-5" />
-                  <button type="submit" className="form-control btn btn-primary">
+                  <label htmlFor="q" className="pb-5" />
+                  <Button type="submit" variant="primary" className="form-control">
                     Agregar
-                  </button>
+                  </Button>
                 </div>
               </div>
             </form>
@@ -72,29 +75,28 @@ function App() {
         <div className="row m-2">
           {homeWork.map(home => (
             <div className="col-6 col-md-3 mb-2">
-              <div className="card ">
-                <div style={{ minHeight: 70 }}>
-                  <span className="d-flex justify-content-end" style={{ padding: '1rem 1rem 0 ' }}>
-                    <svg
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      class="bi bi-file-minus-fill"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      onClick={() => {
-                        setHomeWork(v => v.filter(f => f !== home));
-                      }}
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z"
-                      />
-                    </svg>
-                  </span>
-                  <span className="d-flex justify-content-center">{home}</span>
-                </div>
-              </div>
+              <Card border="success" key={home} text="black" style={{ width: '18rem' }} className="text-center">
+                <Card.Header>Card</Card.Header>
+                <Card.Body>
+                  <Card.Title>Tarea </Card.Title>
+                  <Card.Text>{home}</Card.Text>
+                  <Card.Link
+                    href="#"
+                    onClick={e => {
+                      setHomeWork(v => v.filter(f => f !== home));
+                      e.preventDefault();
+                    }}
+                  >
+                    Eliminar
+                  </Card.Link>
+                  <Card.Link href="#">Editar</Card.Link>
+                  <ButtonGroup aria-label="Basic example">
+                    <Button variant="secondary">Left</Button>
+                    <Button variant="secondary">Middle</Button>
+                    <Button variant="secondary">Right</Button>
+                  </ButtonGroup>
+                </Card.Body>
+              </Card>
             </div>
           ))}
         </div>
