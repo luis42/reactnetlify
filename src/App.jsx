@@ -69,7 +69,7 @@ function App() {
     <div className="container-fluid">
       <div className="card m-4">
         <h1 className="p-3 mb-3 bg-primary text-white" style={{ textAlign: 'center' }}>
-          Ejercicio - Fast vs Good vs Cheap
+          Ejercicio - Money vs Time vs Energy
         </h1>
 
         <div className="custom-control custom-switch " style={{ marginLeft: 'inherit', fontSize: 30 }}>
@@ -91,7 +91,7 @@ function App() {
               fontSize: 18,
             }}
           >
-            Good
+            Money
           </label>
         </div>
 
@@ -114,7 +114,7 @@ function App() {
               textDecoration: groupSwitch.cheap ? '' : 'line-through',
             }}
           >
-            Cheap
+            Time
           </label>
         </div>
 
@@ -137,7 +137,7 @@ function App() {
               textDecoration: groupSwitch.fast ? '' : 'line-through',
             }}
           >
-            Fast
+            Energy
           </label>
         </div>
       </div>
