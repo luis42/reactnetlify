@@ -1,18 +1,18 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 // import logo from './logo.svg';
 import './App.css';
 // Styles
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, ButtonGroup, Card } from 'react-bootstrap';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+// import { Button, ButtonGroup, Card } from 'react-bootstrap';
+// import ToggleButton from 'react-bootstrap/ToggleButton';
 
 function App() {
-  const { register, handleSubmit, errors } = useForm();
+  // const { register, handleSubmit, errors } = useForm();
   // const [count, setCount] = useState();
-  const [homeWork, setHomeWork] = useState([]);
-  const [groupSwitch, setGroupSwitch] = useState({ good: false, cheap: false, fast: false });
+  // const [homeWork, setHomeWork] = useState([]);
+  const [groupSwitch, setGroupSwitch] = useState({ good: true, cheap: true, fast: false });
   // useEffect(() => {
   //   setInterval(() => {
   //     const date = new Date();
