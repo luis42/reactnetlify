@@ -84,7 +84,12 @@ function App() {
           <label
             className="custom-control-label"
             htmlFor="switchGood"
-            style={{ paddingLeft: '1.2rem', fontWeight: groupSwitch.good ? 'lighter' : 'bold', fontSize: 18 }}
+            style={{
+              paddingLeft: '1.2rem',
+              fontWeight: groupSwitch.good ? 'lighter' : 'bold',
+              textDecoration: groupSwitch.good ? '' : 'line-through',
+              fontSize: 18,
+            }}
           >
             Good
           </label>
@@ -102,7 +107,12 @@ function App() {
           <label
             className="custom-control-label"
             htmlFor="switchCheap"
-            style={{ paddingLeft: '1.2rem', fontSize: 18, fontWeight: groupSwitch.cheap ? 'lighter' : 'bold' }}
+            style={{
+              paddingLeft: '1.2rem',
+              fontSize: 18,
+              fontWeight: groupSwitch.cheap ? 'lighter' : 'bold',
+              textDecoration: groupSwitch.cheap ? '' : 'line-through',
+            }}
           >
             Cheap
           </label>
@@ -120,7 +130,12 @@ function App() {
           <label
             className="custom-control-label"
             htmlFor="switchFast"
-            style={{ paddingLeft: '1.2rem', fontSize: 18, fontWeight: groupSwitch.fast ? 'lighter' : 'bold' }}
+            style={{
+              paddingLeft: '1.2rem',
+              fontSize: 18,
+              fontWeight: groupSwitch.fast ? 'lighter' : 'bold',
+              textDecoration: groupSwitch.fast ? '' : 'line-through',
+            }}
           >
             Fast
           </label>
